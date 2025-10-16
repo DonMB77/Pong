@@ -1,21 +1,21 @@
 from turtle import Turtle, Screen
 
-class Paddle:
+class Paddle(Turtle):
     def __init__(self, x_pos, y_pos):
-        self.paddle = Turtle(shape="square", visible=False)
+        super().__init__(shape="square", visible=False)
         self.create_paddle(x_pos, y_pos)
 
     def create_paddle(self, x_pos, y_pos):
-        self.paddle.color("white")
-        self.paddle.shapesize(5, 1)
-        self.paddle.penup()
-        self.paddle.goto(x_pos, y_pos)
-        self.paddle.showturtle()
+        self.color("white")
+        self.shapesize(5, 1)
+        self.penup()
+        self.goto(x_pos, y_pos)
+        self.showturtle()
 
     def go_up(self):
-        new_y = self.paddle.ycor() + 20
-        self.paddle.goto(self.paddle.xcor(), new_y)
+        new_y = self.ycor() + 20
+        self.goto(self.xcor(), new_y)
 
     def go_down(self):
-        new_y = self.paddle.ycor() - 20
-        self.paddle.goto(self.paddle.xcor(), new_y)
+        new_y = self.ycor() - 20
+        self.goto(self.xcor(), new_y)
