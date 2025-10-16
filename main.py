@@ -23,7 +23,9 @@ def main ():
         screen.update()
         ball.move()
         if ball.ycor() >= 280 or ball.ycor() <= -280:
-            ball.bounce()
+            ball.bounce_y_axis()
+        if ball.distance(paddle_r) < 50 and ball.xcor() > 320 or ball.distance(paddle_l) < 50 and ball.xcor() < -320:
+            ball.bounce_x_axis()
 
     is_game_on = True
     return 0
