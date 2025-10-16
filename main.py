@@ -26,6 +26,10 @@ def main ():
             ball.bounce_y_axis()
         if ball.distance(paddle_r) < 50 and ball.xcor() > 320 or ball.distance(paddle_l) < 50 and ball.xcor() < -320:
             ball.bounce_x_axis()
+        if ball.xcor() >= 400:
+            ball.ball_reset()
+        if ball.xcor() <= -400:
+            ball.ball_reset()
 
     is_game_on = True
     return 0
