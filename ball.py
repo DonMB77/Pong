@@ -4,6 +4,8 @@ class Ball(Turtle):
     def __init__(self):
         super().__init__("circle")
         self.create_ball()
+        self.x_movement = 10
+        self.y_movement = 10
 
     def create_ball(self):
         self.color("white")
@@ -12,6 +14,9 @@ class Ball(Turtle):
         self.goto(0,0)
 
     def move(self):
-        new_x = self.xcor() + 10
-        new_y = self.ycor() + 10
+        new_x = self.xcor() + self.x_movement
+        new_y = self.ycor() + self.y_movement
         self.goto(new_x, new_y)
+
+    def bounce(self):
+        self.y_movement *= -1

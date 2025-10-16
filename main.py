@@ -22,6 +22,9 @@ def main ():
         time.sleep(0.1)
         screen.update()
         ball.move()
+        if ball.ycor() >= 280 or ball.ycor() <= -280:
+            ball.bounce()
+
     is_game_on = True
     return 0
 
