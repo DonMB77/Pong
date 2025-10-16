@@ -10,3 +10,8 @@ class Ball(Turtle):
         self.shapesize(1,1)
         self.penup()
         self.goto(0,0)
+
+    def move(self):
+        new_x = self.xcor() + 10
+        new_y = self.ycor() + 10
+        self.goto(new_x, new_y)
