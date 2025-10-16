@@ -6,6 +6,7 @@ def main ():
     screen.setup(800,600)
     screen.bgcolor("black")
     screen.title("Pong Game!")
+    screen.tracer(0)
     paddle_r = Paddle(350, 0)
     paddle_l = Paddle(-350, 0)
     screen.listen()

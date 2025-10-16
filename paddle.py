@@ -2,7 +2,7 @@ from turtle import Turtle, Screen
 
 class Paddle(Turtle):
     def __init__(self, x_pos, y_pos):
-        super().__init__(shape="square", visible=False)
+        super().__init__(shape="square")
         self.create_paddle(x_pos, y_pos)
 
     def create_paddle(self, x_pos, y_pos):
@@ -10,7 +10,6 @@ class Paddle(Turtle):
         self.shapesize(5, 1)
         self.penup()
         self.goto(x_pos, y_pos)
-        self.showturtle()
 
     def go_up(self):
         new_y = self.ycor() + 20
